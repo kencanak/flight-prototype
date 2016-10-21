@@ -1,0 +1,50 @@
+header {
+  min-width: 320px;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: inline-block;
+  background: $main-color;
+  color: $main-inverse-color;
+  @include standard-drop-shadow;
+}
+.container-wrapper {
+  min-width: 320px;
+  max-width: 960px;
+  margin: 0 auto;
+  display: block;
+}
+
+.row {
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+}
+
+.col {
+  margin-right: 3%;
+  box-sizing: border-box;
+  float: left;
+  padding: 15px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.left-panel {
+  width: 30%;
+}
+
+.right-panel {
+  width: 67%;
+}
+
+@media (max-width: $max-width - 1) {
+  .left-panel, .right-panel {
+    width: 100%;
+  }
+}

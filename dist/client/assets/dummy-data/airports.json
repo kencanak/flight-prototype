@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "code": "SIN",
+      "country": "SINGAPORE",
+      "city": "SINGAPORE",
+      "name": "Changi International Airport"
+    },
+    {
+      "code": "HKG",
+      "country": "HONG KONG",
+      "city": "HONG KONG",
+      "name": "Hong Kong International Airport"
+    },
+    {
+      "code": "MEL",
+      "country": "AUSTRALIA",
+      "city": "MELBOURNE",
+      "name": "Melbourne Airport"
+    },
+    {
+      "code": "DPS",
+      "country": "INDONESIA",
+      "city": "BALI",
+      "name": "Ngurah Rai International Airport"
+    },
+    {
+      "code": "HKT",
+      "country": "THAILAND",
+      "city": "PHUKET",
+      "name": "Phuket International Airport"
+    }
+  ]
+}

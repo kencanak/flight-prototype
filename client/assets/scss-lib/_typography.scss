@@ -1,0 +1,48 @@
+h3 {
+  margin: 0 5%;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.note {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.message {
+  font-style: italic;
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  box-sizing: border-box;
+  background: $main-color;
+  color: $main-inverse-color;
+  @include border-radius(8px);
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: $button-hover-color;
+  }
+}
+
+@media (max-width: $max-width) {
+  h3 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,74 @@
+.left-panel {
+  padding: 0px;
+}
+.md-calendar-day-header {
+  th {
+    line-height: 40px;
+  }
+}
+.search-toolbox {
+  .toolbox {
+    background-color: $main-inverse-color;
+    padding: 15px;
+    @include standard-drop-shadow;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+
+    .trip-toggle {
+      .col {
+        width: 50%;
+        border: thin solid $border-thin-color;
+        font-weight: 700;
+        margin: 0;
+        cursor: pointer;
+        @include border-radius-top(8px);
+
+        &.selected {
+          background: $main-color;
+          color: $main-inverse-color;
+          border-color: $main-color;
+        }
+      }
+    }
+
+    .row {
+      margin-bottom: 10px;
+
+      .md-datepicker-input-container {
+        width: 75%;
+      }
+
+      .md-datepicker-button {
+        margin: 6px 8px !important;
+      }
+
+      .md-button.md-icon-button {
+        width: 15%;
+      }
+
+
+
+      .pricing-range {
+        margin-bottom: 0px;
+        .col {
+          width: 50%;
+        }
+      }
+      .pricing-slider {
+        margin-top: 0px;
+      }
+
+      label {
+        width: 100%;
+        display: block;
+        padding-bottom: 10px;
+      }
+
+      &:first-child {
+        margin-top: 10px;
+      }
+    }
+  }
+}

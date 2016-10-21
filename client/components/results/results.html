@@ -1,0 +1,115 @@
+<div class="row trip-details-mobile" id="trip-details-mobile">
+  <div class="row">
+    <div class="col search-details">
+      <p>
+        <span class="label">From:</span>
+        <span class="content">{{resultsController.tripDetails.from}}</span>
+      </p>
+      <p>
+        <span class="label">To:</span>
+        <span class="content">{{resultsController.tripDetails.to}}</span>
+      </p>
+      <p>
+        <span class="label">Passenger(s):</span>
+        <span class="content">{{resultsController.tripDetails.passengers}}</span>
+      </p>
+      <p>
+        <span class="label">Price Range:</span>
+        <span class="content">£ 0 - £ {{resultsController.tripDetails.priceMax}}</span>
+      </p>
+    </div>
+    <div class="col trip-details">
+      <p>
+        <span class="label">Depart:</span>
+        <span class="content">{{resultsController.formatDate(resultsController.tripDetails.departDate)}}</span>
+      </p>
+      <p ng-show="resultsController.tripDetails.return">
+        <span class="label">Return:</span>
+        <span class="content">{{resultsController.formatDate(resultsController.tripDetails.returnDate)}}</span>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <button ng-click="resultsController.newSearch()">Refine Your Search</button>
+  </div>
+</div>
+<div class="results-wrapper">
+  <div class="row title web">
+    <h5>Your Results</h5>
+    <div class="trip-details">
+      <p>
+        <span class="label">Depart:</span>
+        <span class="content">{{resultsController.formatDate(resultsController.tripDetails.departDate)}}</span>
+      </p>
+      <p ng-show="resultsController.tripDetails.return">
+        <span class="label">Return:</span>
+        <span class="content">{{resultsController.formatDate(resultsController.tripDetails.returnDate)}}</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="row title mobile">
+    <h5>Your Results</h5>
+  </div>
+  <div class="row results" ng-show="resultsController.results.length === 0">
+    <p class="message">Sorry, we didn't quite get your query. Please kindly refine your search query.</p>
+  </div>
+  <div class="row results" ng-show="resultsController.results.length > 0">
+
+    <div class="result-box" ng-repeat="trip in resultsController.results">
+      <div class="col thumbnail">
+        <div>
+          <span>
+            <img src="{{trip.depart.flight_details.image}}"/>
+          </span>
+        </div>
+      </div>
+      <div class="col flight-details" ng-class="!trip.return ? 'double-col' : ''">
+        <div class="row flight-code note">
+          {{trip.depart.flight_details.code}}
+        </div>
+        <div class="row flight-route">
+          {{trip.depart.airport_details.from}} > {{trip.depart.airport_details.to}}
+        </div>
+        <div class="row trip-details note">
+          <p>
+            <span class="label">Depart:</span>
+            <span class="content">{{trip.depart.timings.depart_time}}</span>
+          </p>
+          <p>
+            <span class="label">Arrive:</span>
+            <span class="content">{{trip.depart.timings.arrive_time}}</span>
+          </p>
+        </div>
+      </div>
+      <div class="col flight-details" ng-show="trip.return">
+        <div class="row flight-code note">
+          {{trip.return.flight_details.code}}
+        </div>
+        <div class="row flight-route">
+          {{trip.return.airport_details.from}} > {{trip.return.airport_details.to}}
+        </div>
+        <div class="row trip-details note">
+          <p>
+            <span class="label">Depart:</span>
+            <span class="content">{{trip.return.timings.depart_time}}</span>
+          </p>
+          <p>
+            <span class="label">Arrive:</span>
+            <span class="content">{{trip.return.timings.arrive_time}}</span>
+          </p>
+        </div>
+      </div>
+      <div class="col flight-price">
+        <span>
+          £ {{trip.price}}
+        </span>
+      </div>
+      <div class="col flight-action">
+        <span>
+          <button>Select this flight</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+@mixin standard-drop-shadow {
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    0px 1px 3px 0px rgba(50, 50, 50, 0.55);
+  box-shadow:         0px 1px 3px 0px rgba(50, 50, 50, 0.55);
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius-top($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  -moz-border-radius-topleft: $radius;
+}
+
+@mixin border-radius-bottom($radius) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -moz-border-radius-bottomleft: $radius;
+}
+
+@mixin border-radius-left($radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  -moz-border-radius-topleft: $radius;
+}
+
+@mixin border-radius-right($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -moz-border-radius-topright: $radius;
+}
+
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

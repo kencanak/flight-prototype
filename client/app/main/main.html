@@ -1,0 +1,9 @@
+<header>
+  <h3>Flight Search Engine</h3>
+</header>
+<div class="container-wrapper">
+  <div class="row" ng-class="$ctrl.hasResult ? 'has-result' : ''">
+      <search class="left-panel col slide-in" ng-show="(!$ctrl.screenStatus.hasResult && $ctrl.screenStatus.smallScreen) || !$ctrl.screenStatus.smallScreen"></search>
+      <results class="right-panel col slide-in" ng-show="($ctrl.screenStatus.hasResult && $ctrl.screenStatus.smallScreen) || !$ctrl.screenStatus.smallScreen"></results>
+  </div>
+</div>
